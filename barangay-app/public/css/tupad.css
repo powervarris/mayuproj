@@ -1,0 +1,55 @@
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #000927;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .form-input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-submit {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-submit:hover {
+    background-color: #3e8e41;
+  }
+
+  .officials {
+    background-image: url('https://i.ibb.co/Y0x402r/429830436-719635967011848-7766261297760836012-n.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 125vh;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .white {
+    width: 39%;
+    background-color: white;
+    border-radius: 0.5rem;
+    /* padding-bottom: 40px; */
+    margin: auto;
+    padding: 10px;
+}

@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #000927;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    margin: 0;
+    padding: 2%;
+    height: 7%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .navul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 60%;
+  }
+  
+  .navlogo {
+    width: 10%;
+    height: 100%;
+  }
+  
+  .navbtn {
+    color: white;
+    padding: 5%;
+    margin: 5%;
+    text-decoration: none;
+    font-size: 13pt;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  
+  .navbtn:hover {
+    color: #969696;
+  }
+  
+  .navlogin {
+    color: white;
+    padding: 15pt;
+    text-decoration: none;
+    font-size: 13pt;
+    background-color: #535594;
+    border-radius: 8px;
+  }
+  
+  .navlogin:hover {
+    background-color: #5a5c91;
+  }
+  
+  .linavlogin {
+    width: 45%;
+    margin-top: 10%;
+    margin-left: 22%;
+  }
+  
+  .navcontainer {
+    display: flex;
+  }
+  
+  .mydiv {
+    background-image: url("/images/welcomebg.png");
+    height: 475pt; /* or any other height you want */
+    width: 100%; /* or any other width you want */
+    margin-top: 6%;
+  }
+  
+  .mydiv2 {
+    display: flex;
+  }
+  
+  .mydiv2left {
+    margin: 5%;
+    width: 50%;
+    justify-content: center;
+  }
+  
+  .mydiv2right {
+    width: 50%;
+  }
+  
+  .phonepng {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .welcomelogo {
+    width: 60%;
+    height: max-content;
+    margin-left: 20%;
+    margin-top: 10%;
+  }
+  
+  .welcomesub {
+    font-size: 25px;
+    text-align: center;
+    color: #131336;
+  }
+  

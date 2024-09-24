@@ -1,0 +1,28 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  background-color: #000927;
+  color: #fff;
+  /* padding: 20px; */
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.sidebarbtn {
+  padding: 15px;
+  padding-left: 33px;
+  color: #fff;
+}
+
+.sidebarbtn:hover {
+  background-color: #535594;
+}
