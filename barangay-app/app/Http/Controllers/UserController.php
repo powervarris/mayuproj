@@ -4,6 +4,8 @@
 
     use Illuminate\Http\Request;
     use App\Models\User;
+    use App\Models\PostBlog;
+
     class UserController extends Controller
     {
         //
@@ -83,7 +85,9 @@
 
         public function index()
         {
-            return view('student.blog', ['users' => $this->users]);
+            $blogdate = PostBlog::paginate(5);
+
+            return view('student.blog', ['blogdate' => $blogdate]);
         }
 
         public function create()
@@ -100,6 +104,17 @@
             }
 
             return view('student.blog-show', ['user' => $user]);
+        }
+
+        public function showBlog($id)
+        {
+            $postBlog = PostBlog::find($id);
+
+            if (!$postBlog) {
+                abort(404, 'Post not found');
+            }
+
+            return view('student.blog-show', ['postBlog' => $postBlog]);
         }
 
         public function store(Request $request)

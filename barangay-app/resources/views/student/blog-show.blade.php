@@ -6,24 +6,24 @@
 
 <body>
 <div>
-    <h2>User Details</h2>
-    <table>
-        <tr>
-            <th>Author</th>
-            <td>{{$user['author']}}</td>
-        </tr>
-        <tr>
-            <th>Blog Title</th>
-            <td>{{$user['blog_title']}}</td>
-        </tr>
-        <tr>
-            <th>Short Description</th>
-            <td>{{$user['blog_content']}}</td>
-        </tr>
-        <tr>
-            <th>Date Published</th>
-            <td>{{$user['date_published']}}</td>
-        </tr>
-    </table>
+    <h2>Blog Details</h2>
+        <table>
+            <tr>
+                <th>Author</th>
+                <td>{{$postBlog->author}}</td>
+            </tr>
+            <tr>
+                <th>Blog Title</th>
+                <td>{{$postBlog->blog_title}}</td>
+            </tr>
+            <tr>
+                <th>Blog Content</th>
+                <td>{{$postBlog->blog_content}}</td>
+            </tr>
+            <tr>
+                <th>Date Created</th>
+                <td>{{$postBlog->date_created}}</td>
+            </tr>
+        </table>
 </div>
 </body>

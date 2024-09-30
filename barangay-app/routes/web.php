@@ -4,6 +4,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Middleware\UserMiddleware;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 
 Route::get('/', function () {
@@ -62,10 +63,12 @@ Route::get('admin/profile', function () {
 });
 });
 
-Route::get('/blogs',[UserController::class,'index']);
+Route::get('/blogs',[UserController::class,'index'])->middleware(UserMiddleware::class);
 Route::get('/blogs-create',[UserController::class,'create'])->middleware(AdminMiddleware::class);
 Route::get('/blogs/{id}', [UserController::class, 'show'])->middleware(UserMiddleware::class);
 Route::post('/blogs', [UserController::class, 'store']);
 Route::get('/blogs/{id}/edit', [UserController::class, 'edit'])->middleware(AdminMiddleware::class);
 Route::put('/blogs/{id}', [UserController::class, 'update']);
 Route::get('/usercreate', [UserController::class, 'userCreate']);
+Route::post('/post', [PostController::class, 'store'])->name('post.store');
+Route::get('/showblog/{id}', [UserController::class, 'showBlog'])->name('showBlog');
