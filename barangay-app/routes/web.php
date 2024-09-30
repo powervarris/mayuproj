@@ -72,3 +72,5 @@ Route::put('/blogs/{id}', [UserController::class, 'update']);
 Route::get('/usercreate', [UserController::class, 'userCreate']);
 Route::post('/post', [PostController::class, 'store'])->name('post.store');
 Route::get('/showblog/{id}', [UserController::class, 'showBlog'])->name('showBlog');
+Route::get('/editblog/{id}', [UserController::class, 'editBlog'])->name('editBlog');
+Route::put('/updateblog/{id}', [UserController::class, 'updateBlog'])->name('updateBlog');

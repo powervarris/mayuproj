@@ -133,6 +133,7 @@
                return view('student.blog', ['users' => $this->users]);
         }
 
+
         public function edit($id)
         {
             $user = collect($this->users)->firstWhere('id', $id);
@@ -164,6 +165,40 @@
 
             return view('student.blog-show', ['user' => $user]);
         }
+
+        public function editBlog($id){
+            $postBlog = PostBlog::find($id);
+
+            if (!$postBlog) {
+                abort(404, 'Post not found');
+            }
+
+            return view('student.blog-edit', ['postBlog' => $postBlog]);
+
+        }
+
+        public function updateBlog(Request $request, $id)
+        {
+            $data = $request->validate([
+                'author' => 'required',
+                'blog_title' => 'required',
+                'blog_content' => 'required',
+            ]);
+
+            $postBlog = PostBlog::find($id);
+
+            if (!$postBlog) {
+                abort(404, 'Post not found');
+            }
+
+            $postBlog->author = $data['author'];
+            $postBlog->blog_title = $data['blog_title'];
+            $postBlog->blog_content = $data['blog_content'];
+            $postBlog->save();
+
+            return redirect('/blogs');
+        }
+
 
         public function userCreate()
         {
