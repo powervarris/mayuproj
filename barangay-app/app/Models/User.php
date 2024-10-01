@@ -65,7 +65,7 @@ class User extends Authenticatable
 
     public function blogs()
         {
-            return $this->hasMany(PostBlog::class);
+            return $this->hasMany(PostBlog::class , 'email', 'email');
         }
 
 }

@@ -1,0 +1,52 @@
+/* Add this to your blog.css file */
+
+/* Pink theme styles */
+
+body {
+    background-color: #ffe6e6; /* light pink background */
+    display: flex; /* add this to center the content horizontally */
+    justify-content: center; /* add this to center the content horizontally */
+}
+
+h2 {
+    color: #e74c7c; /* pinkish-red color for headings */
+    text-align: center; /* add this to center the heading */
+}
+
+.container {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(255, 192, 203, 0.7);
+    height: fit-content;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%; /* add this to make the table full width */
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ffc5c5; /* light pink border */
+}
+
+th {
+    background-color: #ffc0cb; /* light pink background for table headers */
+    color: #ffffff; /* white text color */
+    font-family: 'Open Sans', Sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #ffe6e6; /* light pink background for even rows */
+}
+
+tr:hover {
+    background-color: #ffd7d7; /* light pink hover effect */
+}

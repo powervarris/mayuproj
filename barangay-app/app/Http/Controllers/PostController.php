@@ -27,4 +27,12 @@ class PostController extends Controller
     return redirect('/blogs');
 
     }
+
+    public function index()
+    {
+        $user = Auth::user();
+        $blogs = $user->blogs;
+
+        return view('student.blog-selfblog', compact('blogs'));
+    }
 }

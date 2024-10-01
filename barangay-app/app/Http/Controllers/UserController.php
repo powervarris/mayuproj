@@ -199,6 +199,17 @@
             return redirect('/blogs');
         }
 
+        public function showUserBlog($id)
+        {
+            $user = User::with('blog')->find($id);
+
+            if (!$user) {
+                abort(404, 'User not found');
+            }
+
+            return view('student.blog-selfblog', ['user' => $user]);
+        }
+
 
         public function userCreate()
         {

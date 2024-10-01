@@ -1,0 +1,80 @@
+/* edit.css */
+
+/* Add some basic styling to the form */
+form {
+    max-width: 46%;
+    margin: 40px auto;
+    padding: 50px;
+    background-color: #ffe6e6;
+    border: 1px solid #cf69b6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Style the labels and inputs */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #cf69b6; /* pink text color */
+  }
+  
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cf69b6; /* pink border */
+    background-color: #ffe6e6; /* light pink background */
+  }
+  
+  input[type="submit"] {
+    background-color: #cf69b6; /* pink background */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #e468a2; /* darker pink hover effect */
+  }
+  
+  /* Add some basic typography */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    width: 100%; /* fixed width */
+    height: 100px; /* fixed height */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cf69b6; /* pink border */
+    background-color: #ffe6e6; /* light pink background */
+    resize: none; /* prevent resizing */
+  }
+
+  .title-container {
+    text-align: center;
+    border: 6px solid #ff69b4;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 50%;
+    margin-left: 24%;
+    background-color: white;
+    margin-top:2%;
+}
+
+h1 {
+    font-size: 36px; 
+    font-weight: bold; 
+    color: #ff69b4; 
+}

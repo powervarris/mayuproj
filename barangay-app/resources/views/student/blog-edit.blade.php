@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="{{asset('css/edit.css')}}" rel="stylesheet">
     <title>Edit a Blog Post</title>
 </head>
 <body>
+<div class="title-container">
+<h1>Edit Blog Post</h1>
+</div>
     <form action="{{route('updateBlog', ['id'=>$postBlog['id']])}}" method="POST">
         @csrf
         @method('PUT')

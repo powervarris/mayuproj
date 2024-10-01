@@ -63,14 +63,17 @@ Route::get('admin/profile', function () {
 });
 });
 
-Route::get('/blogs',[UserController::class,'index'])->middleware(UserMiddleware::class);
-Route::get('/blogs-create',[UserController::class,'create'])->middleware(AdminMiddleware::class);
-Route::get('/blogs/{id}', [UserController::class, 'show'])->middleware(UserMiddleware::class);
+//BLOGS
+Route::get('/blogs',[UserController::class,'index']);
+Route::get('/blogs-create',[UserController::class,'create'])->name('createblog');
+Route::get('/blogs/{id}', [UserController::class, 'show']);
 Route::post('/blogs', [UserController::class, 'store']);
 Route::get('/blogs/{id}/edit', [UserController::class, 'edit'])->middleware(AdminMiddleware::class);
 Route::put('/blogs/{id}', [UserController::class, 'update']);
 Route::get('/usercreate', [UserController::class, 'userCreate']);
 Route::post('/post', [PostController::class, 'store'])->name('post.store');
 Route::get('/showblog/{id}', [UserController::class, 'showBlog'])->name('showBlog');
-Route::get('/editblog/{id}', [UserController::class, 'editBlog'])->name('editBlog');
-Route::put('/updateblog/{id}', [UserController::class, 'updateBlog'])->name('updateBlog');
+Route::get('/editblog/{id}', [UserController::class, 'editBlog'])->name('editBlog')->middleware(AdminMiddleware::class);
+Route::put('/updateblog/{id}', [UserController::class, 'updateBlog'])->name('updateBlog')->middleware(AdminMiddleware::class);
+
+Route::get('/selfblogs', [PostController::class, 'index']);

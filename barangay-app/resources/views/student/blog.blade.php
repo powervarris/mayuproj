@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" type="text/css" href="./css/blog.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,32 +24,47 @@
                 </ul>
             </div>
     @endif
-    <h1>Blog Info</h1>
+
+    <div class="container">
+  <h1 class="title">BLOG INFORMATION</h1>
+  <div class="create">
+    <a href="{{ route('createblog') }}" class="btn btn-primary">Create New Blog</a>
+    </div>
+    </div>
+
+ <div class="container mx-auto">
 <table>
-    @foreach ($blogdate as $blogs)
-      <tr>
-        <td>{{$blogs['author']}}</td>
-        <td>{{$blogs['blog_title']}}</td>
-        <td>{{$blogs['blog_content']}}</td>
-        <td>{{$blogs['date_created']}}</td>
-        <td>{{$blogs['email']}}</td>
-        <td><a href="{{ route('showBlog', ['id' => $blogs['id']]) }}">View Blog</a></td>
-        <td><a href="{{ route('editBlog', ['id' => $blogs['id']]) }}">Edit Blog</a></td>
-    </tr>
-    @endforeach
+  <tr>
+    <th>Author</th>
+    <th>Blog Title</th>
+    <th>Date Created</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+  @foreach ($blogdate as $blogs)
+  <tr>
+    <td>{{$blogs['author']}}</td>
+    <td>{{$blogs['blog_title']}}</td>
+    <td>{{$blogs['date_created']}}</td>
+    <td>{{$blogs['email']}}</td>
+    <td>
+      <button type="button" class="btn btn-primary">
+        <a href="{{ route('showBlog', ['id' => $blogs['id']]) }}">View Blog</a>
+      </button>
+      <button type="button" class="btn btn-warning">
+        <a href="{{ route('editBlog', ['id' => $blogs['id']]) }}">Edit Blog</a>
+      </button>
+    </td>
+  </tr>
+
+  @endforeach
 </table>
-    {{ $blogdate->links() }}
-<h2>Create Blog</h2>
-    <form action="{{ route('post.store') }}" method="POST">
-        @csrf
-        <label for="author">Author:</label><br>
-        <input type="text" id="author" name="author" value="{{old('author')}}"><br>
-        <label for="blog_title">Blog Title:</label><br>
-        <input type="text" id="blog_title" name="blog_title" value="{{old('blog_title')}}"><br>
-        <label for="blog_content">Blog Content:</label><br>
-        <textarea id="blog_content" name="blog_content">{{old('blog_content')}}</textarea><br>
-        <input type="submit" value="Submit">
-    </form>
+
+<div class="pagination">
+  {{ $blogdate->links() }}
+  </div>
+
+</div>
 
 
 
